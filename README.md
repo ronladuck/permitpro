@@ -1,122 +1,127 @@
-# PermitEasy MVP
+# PermitPro
 
-A modern web application that helps homeowners and contractors quickly identify building permit requirements by entering project details and property address.
+Skip the permit headache. We've got you covered.
 
-## 🚀 Features
+## Features
 
-- **Instant Permit Detection**: Enter your address and project description to get permit requirements in seconds
-- **Location-Aware**: Accurate requirements based on your specific address and local building codes
-- **Cost Transparent**: Real permit costs and processing timelines upfront
-- **Interactive Chatbot**: Get help with permit questions and requirements
-- **Modern UI**: Clean, Haven-inspired design with orange and white color scheme
-- **Mobile Responsive**: Works perfectly on all devices
+- Smart permit detection based on project description
+- Real-time address autocomplete with Google Maps integration
+- Accurate cost and timeline estimates
+- Comprehensive permit requirements
+- Interactive chatbot for permit questions
 
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 14 (App Router)
-- **Styling**: Tailwind CSS
-- **Language**: JavaScript/JSX
-- **State Management**: React Hooks
-- **Development**: Hot reload, fast refresh
-
-## 📁 Project Structure
-
-```
-permitpro/
-├── app/
-│   ├── components/
-│   │   ├── AddressInput.jsx       # Address autocomplete input
-│   │   ├── ChatbotWidget.jsx      # Interactive help chatbot
-│   │   ├── LoadingSpinner.jsx     # Loading animation component
-│   │   ├── PermitCard.jsx         # Individual permit display card
-│   │   └── ProjectDescriptionInput.jsx # Project details input
-│   ├── results/
-│   │   └── page.jsx               # Results page showing permit requirements
-│   ├── globals.css                # Global styles and theme
-│   ├── layout.jsx                 # Root layout component
-│   └── page.jsx                   # Homepage with search form
-├── lib/
-│   ├── api.js                     # Mock API for permit data
-│   └── utils.js                   # Utility functions
-└── public/                        # Static assets
-```
-
-## 🚦 Getting Started
+## Getting Started
 
 ### Prerequisites
+
 - Node.js 18+ 
 - npm or yarn
+- Google Maps API key (for address autocomplete)
 
 ### Installation
 
-1. **Clone the repository**
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd permitpro
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Set up Google Maps API (for address autocomplete):
+
+   a. Go to the [Google Cloud Console](https://console.cloud.google.com/)
+   
+   b. Create a new project or select an existing one
+   
+   c. Enable the **Places API** for your project
+   
+   d. Create an API key:
+      - Go to "Credentials" in the sidebar
+      - Click "Create Credentials" → "API key"
+      - Copy your API key
+   
+   e. (Optional but recommended) Restrict your API key:
+      - Click on your API key to edit it
+      - Under "API restrictions", select "Restrict key"
+      - Choose "Places API" from the list
+      - Under "Website restrictions", add your domain(s)
+
+4. Configure your API key:
+
+   **Option A: Environment Variable (Recommended)**
+   
+   Create a `.env.local` file in the root directory:
    ```bash
-   git clone https://github.com/ronladuck/permitpro.git
-   cd permitpro
+   NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_actual_api_key_here
    ```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+   **Option B: Direct Configuration**
+   
+   Edit `lib/googleMapsConfig.js` and replace `'your_google_maps_api_key_here'` with your actual API key.
 
-3. **Run the development server**
-   ```bash
-   npm run dev
-   ```
+5. Run the development server:
+```bash
+npm run dev
+```
 
-4. **Open in browser**
-   - Navigate to [http://localhost:3000](http://localhost:3000)
-   - The app will automatically reload when you make changes
+6. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 🎨 Design System
+### Google Maps Integration
 
-The app uses a **Haven-inspired design** with:
-- **Primary Color**: Orange (#f97316)
-- **Typography**: Inter font family
-- **Spacing**: Tight, professional spacing
-- **Components**: Clean cards, modern buttons, subtle animations
-- **Responsive**: Mobile-first approach
+The address input component automatically detects if Google Maps API is configured:
 
-## 🧪 Current Status
+- **With API key**: Provides real-time address suggestions from Google Places
+- **Without API key**: Falls back to mock suggestions for development
 
-**MVP Stage** - Core functionality implemented:
-- ✅ Address input with autocomplete suggestions
-- ✅ Project description input with helpful tips  
-- ✅ Intelligent permit detection based on keywords
-- ✅ 5 permit types with realistic costs and timelines
-- ✅ Interactive chatbot with permit guidance
-- ✅ Location-based pricing adjustments
-- ✅ Responsive design across all devices
+Features with Google Maps:
+- ✅ Real address validation
+- ✅ Autocomplete suggestions
+- ✅ Address standardization
+- ✅ Geographic accuracy
 
-## 🔮 Next Steps
+## API Reference
 
-**Backend Integration:**
-- [ ] Connect to real permit database APIs
-- [ ] Implement user authentication  
-- [ ] Add permit application tracking
-- [ ] Real-time permit status updates
+### Address Autocomplete
 
-**Enhanced Features:**
-- [ ] PDF permit application generation
-- [ ] Email notifications and reminders
-- [ ] Contractor network integration
-- [ ] Multi-city expansion
+The `AddressInput` component supports:
 
-## 🚀 Deployment
+- Real-time address suggestions
+- US address filtering
+- Place ID integration for enhanced accuracy
+- Fallback to mock data when API unavailable
 
-Ready for deployment on:
-- **Vercel** (recommended for Next.js)
-- **Netlify** 
-- **AWS/GCP/Azure**
+### Permit Detection
 
-## 📞 Support
+The system analyzes project descriptions for keywords to determine required permits:
 
-For questions or issues:
-- Create a GitHub issue
-- Contact the development team
-- Check the chatbot for permit-related questions
+- **Building permits**: renovation, remodel, addition, construction
+- **Electrical permits**: electrical, wiring, outlet, circuit, panel
+- **Plumbing permits**: plumbing, pipe, bathroom, kitchen, sink
+- **Mechanical permits**: HVAC, heating, cooling, ventilation
+- **Demolition permits**: demolition, remove, tear down
+
+## Tech Stack
+
+- **Frontend**: Next.js 14, React 18, Tailwind CSS
+- **APIs**: Google Maps Places API
+- **Deployment**: Vercel (recommended)
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## License
+
+[License information]
 
 ---
 
-**Built with ❤️ for contractors and homeowners who are tired of permit runaround.**
+**Note**: This is a demonstration application. For production use, integrate with real permit databases and city APIs.

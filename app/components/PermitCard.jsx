@@ -118,10 +118,22 @@ export default function PermitCard({ permit }) {
 
         {/* Actions */}
         <div className="bg-gray-50 px-6 py-4 flex gap-3">
-          <button className="flex-1 bg-orange-500 hover:bg-orange-600 text-white font-medium py-2.5 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-sm text-sm">
+          <button 
+            onClick={() => {
+              // In a real app, this would show permit details or open a modal
+              alert(`Getting detailed information for ${permit.name}...`)
+            }}
+            className="flex-1 bg-orange-500 hover:bg-orange-600 text-white font-medium py-2.5 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-sm text-sm"
+          >
             Get details
           </button>
-          <button className="flex-1 bg-white hover:bg-gray-50 text-gray-900 font-medium py-2.5 px-4 rounded-lg transition-all duration-200 border border-gray-200 hover:border-gray-300 text-sm">
+          <button 
+            onClick={() => {
+              // In a real app, this would redirect to the city's permit application portal
+              window.open('https://www.example-city.gov/permits', '_blank')
+            }}
+            className="flex-1 bg-white hover:bg-gray-50 text-gray-900 font-medium py-2.5 px-4 rounded-lg transition-all duration-200 border border-gray-200 hover:border-gray-300 text-sm hover:shadow-sm"
+          >
             Apply online
           </button>
         </div>
