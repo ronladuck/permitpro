@@ -98,51 +98,123 @@ export default function HomePage() {
       {/* Features Section */}
       <section className="py-16 lg:py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-5">
-              Why contractors love us
+              Why contractors use this instead of Google
             </h2>
-            <p className="text-lg text-gray-600 max-w-xl mx-auto">
-              We've helped over 10,000 projects get started faster.
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Because we've all wasted too many hours on city websites that don't make sense.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
-            <div className="card p-7 text-center group hover:scale-105 transition-all duration-200">
-              <div className="w-14 h-14 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:rotate-3 transition-transform duration-200">
-                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+          <div className="space-y-8">
+            {/* First benefit */}
+            <div className="card p-8 md:p-10">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div className="flex items-center mb-4">
+                    <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                    <span className="text-sm font-medium text-green-700 uppercase tracking-wide">Actually helpful</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    We know what permits you <em>actually</em> need
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed mb-6">
+                    Built by people who've pulled permits in 47 cities. We know the difference between what the website says and what the permit office actually wants. No more getting to the counter and finding out you missed something obvious.
+                  </p>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Real experience from 47 cities
+                  </div>
+                </div>
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center">
+                  <div className="text-4xl mb-4">🎯</div>
+                  <div className="text-2xl font-bold text-blue-900 mb-2">94%</div>
+                  <p className="text-sm text-blue-700">Get it right first time</p>
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Actually accurate</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Built by people who've pulled permits in 47 cities. We know the real requirements, not just what's on the website.
-              </p>
             </div>
 
-            <div className="card p-7 text-center group hover:scale-105 transition-all duration-200">
-              <div className="w-14 h-14 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:rotate-3 transition-transform duration-200">
-                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+            {/* Second benefit */}
+            <div className="card p-8 md:p-10">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="order-2 md:order-1 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 text-center">
+                  <div className="text-4xl mb-4">⚡</div>
+                  <div className="text-2xl font-bold text-green-900 mb-2">30 sec</div>
+                  <p className="text-sm text-green-700">vs 3+ hours of research</p>
+                </div>
+                <div className="order-1 md:order-2">
+                  <div className="flex items-center mb-4">
+                    <div className="w-3 h-3 bg-orange-500 rounded-full mr-3"></div>
+                    <span className="text-sm font-medium text-orange-700 uppercase tracking-wide">Time saver</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    No more digging through city websites
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed mb-6">
+                    You know how it goes - you start looking for a simple permit and 2 hours later you're deep in municipal code wondering if you need an environmental impact study for a bathroom remodel. We cut through the BS.
+                  </p>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Average time saved: 2.3 hours
+                  </div>
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Stupid fast</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                What used to take you 2 hours of research now takes 30 seconds. Seriously.
-              </p>
             </div>
 
-            <div className="card p-7 text-center group hover:scale-105 transition-all duration-200">
-              <div className="w-14 h-14 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:rotate-3 transition-transform duration-200">
-                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                </svg>
+            {/* Third benefit */}
+            <div className="card p-8 md:p-10">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div className="flex items-center mb-4">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
+                    <span className="text-sm font-medium text-purple-700 uppercase tracking-wide">No surprises</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Real costs upfront, not "call for pricing"
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed mb-6">
+                    Nobody likes surprises when you're trying to bid a job. We give you actual permit fees and realistic timelines so you can quote properly and set expectations with clients.
+                  </p>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                    </svg>
+                    Real fees from city databases
+                  </div>
+                </div>
+                <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center">
+                  <div className="text-4xl mb-4">💰</div>
+                  <div className="text-2xl font-bold text-purple-900 mb-2">12k+</div>
+                  <p className="text-sm text-purple-700">Projects priced accurately</p>
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">No surprises</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Real permit costs and timelines upfront. No "it depends" answers.
-              </p>
+            </div>
+          </div>
+
+          {/* Quick stats bar */}
+          <div className="mt-16 bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+              <div>
+                <div className="text-2xl font-bold text-gray-900">47</div>
+                <p className="text-xs text-gray-600 uppercase tracking-wide">Cities covered</p>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-gray-900">12,847</div>
+                <p className="text-xs text-gray-600 uppercase tracking-wide">Projects helped</p>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-gray-900">2.3hrs</div>
+                <p className="text-xs text-gray-600 uppercase tracking-wide">Average saved</p>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-gray-900">94%</div>
+                <p className="text-xs text-gray-600 uppercase tracking-wide">Success rate</p>
+              </div>
             </div>
           </div>
         </div>
@@ -153,82 +225,70 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Real people, real projects
+              Hear it from people who've been there
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="card p-6">
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-semibold mr-3">
+            <div className="card p-7 relative">
+              <div className="absolute top-5 right-5 text-orange-200">
+                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                </svg>
+              </div>
+              <div className="flex items-center mb-5">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
                   MR
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">Mike Rodriguez</div>
-                  <div className="text-sm text-gray-500">General Contractor, Austin TX</div>
+                  <div className="font-bold text-gray-900">Mike Rodriguez</div>
+                  <div className="text-sm text-gray-500">General Contractor • Austin, TX</div>
                 </div>
               </div>
-              <p className="text-gray-700 text-sm leading-relaxed">
-                "Saved me 3 hours on my last kitchen reno. Found out I needed a structural permit I would've missed completely."
+              <p className="text-gray-700 leading-relaxed">
+                "Saved me from a nightmare. Was about to start a kitchen gut job and almost missed the structural permit. Would've been a $5k mistake when the inspector showed up."
               </p>
             </div>
 
-            <div className="card p-6">
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-semibold mr-3">
+            <div className="card p-7 relative">
+              <div className="absolute top-5 right-5 text-orange-200">
+                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                </svg>
+              </div>
+              <div className="flex items-center mb-5">
+                <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
                   SC
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">Sarah Chen</div>
-                  <div className="text-sm text-gray-500">Homeowner, Portland OR</div>
+                  <div className="font-bold text-gray-900">Sarah Chen</div>
+                  <div className="text-sm text-gray-500">Homeowner • Portland, OR</div>
                 </div>
               </div>
-              <p className="text-gray-700 text-sm leading-relaxed">
-                "Used this for our deck project. Way easier than calling the city office 5 times. Actually got someone who knew what they were talking about."
+              <p className="text-gray-700 leading-relaxed">
+                "Finally got straight answers! Portland's website is a maze and calling took forever. This told me exactly what I needed for our deck in under a minute."
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-12 lg:py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-orange-500 mb-2">12,847</div>
-              <p className="text-sm text-gray-600">Projects helped</p>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-orange-500 mb-2">47</div>
-              <p className="text-sm text-gray-600">Cities covered</p>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-orange-500 mb-2">2.3hrs</div>
-              <p className="text-sm text-gray-600">Avg time saved</p>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-orange-500 mb-2">94%</div>
-              <p className="text-sm text-gray-600">Success rate</p>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-500 to-orange-600">
+      <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-            Ready to skip the permit runaround?
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Stop wasting mornings on permit research
           </h2>
-          <p className="text-lg text-orange-100 mb-8">
-            Join 12,000+ contractors and homeowners who don't waste time on research anymore.
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            Get back to building. We'll handle figuring out what paperwork you actually need.
           </p>
           <button
             onClick={() => document.querySelector('form').scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white text-orange-600 font-semibold py-4 px-8 rounded-xl hover:bg-gray-50 transition-all duration-200 shadow-large transform hover:scale-105"
+            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 shadow-large transform hover:scale-105"
           >
-            Get my permits now
+            Tell us about your project →
           </button>
         </div>
       </section>
